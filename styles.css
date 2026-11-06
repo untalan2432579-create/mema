@@ -1,158 +1,196 @@
-/* Shared Theme Variables */
+/* Color Palette & Custom Variables */
 :root {
-    --primary-color: #2563eb;
-    --primary-light: #eff6ff;
-    --bg-color: #f8fafc;
+    --purple-primary: #a879e6;
+    --purple-gradient: linear-gradient(135deg, #a879e6 0%, #9061d4 100%);
+    --bg-light: #f9f8fe;
     --card-bg: #ffffff;
-    --text-color: #1e293b;
-    --text-muted: #64748b;
-    --border-color: #e2e8f0;
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    --radius: 12px;
+    --text-dark: #2d2b38;
+    --text-light: #ffffff;
+    --border-soft: #f0e6fa;
+    --radius-card: 16px;
+    --radius-pill: 20px;
 }
 
-/* Base resets & typography */
+/* Base Styles & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
     line-height: 1.6;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 20px;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+/* Top Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: var(--purple-primary);
 }
 
-/* Shared Navigation */
-.nav-bar {
-    margin-bottom: 24px;
-}
-
-.nav-bar a {
-    color: var(--primary-color);
+.logo {
+    color: var(--text-light);
+    font-size: 1.4rem;
+    font-weight: 700;
     text-decoration: none;
-    font-weight: 600;
 }
 
-.nav-bar a:hover {
-    text-decoration: underline;
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
 
-/* Card layout */
-.card {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    padding: 30px;
-    margin-bottom: 24px;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--border-color);
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: opacity 0.2s;
 }
 
-/* Header / Profile */
-.profile-header {
-    text-align: center;
+nav ul li a:hover {
+    opacity: 0.8;
+}
+
+/* Purple Hero Header Section */
+header {
+    background: var(--purple-gradient);
+    color: var(--text-light);
+    padding: 40px 60px 60px 60px;
+}
+
+.header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .avatar {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 16px;
-    background-color: var(--border-color);
+    border: 4px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-h1 {
-    margin: 0 0 8px 0;
-    font-size: 2rem;
-}
-
-.tagline {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    margin-bottom: 16px;
+.header-text h1 {
+    font-size: 2.2rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .contact-info {
     display: flex;
-    justify-content: center;
-    gap: 16px;
     flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.contact-info li, 
+.contact-info span {
+    color: var(--text-light);
     font-size: 0.95rem;
 }
 
 .contact-info a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.contact-info a:hover {
+    color: var(--text-light);
     text-decoration: underline;
 }
 
-/* Section Headings */
-h2 {
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 8px;
-    margin-top: 0;
-    margin-bottom: 16px;
-    font-size: 1.3rem;
-    color: var(--primary-color);
+.tagline {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
 }
 
-/* List Items & Badges */
+/* Main Container Layout */
+.container {
+    max-width: 1000px;
+    margin: -30px auto 40px auto;
+    padding: 0 20px;
+}
+
+/* Section Card Styles */
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius-card);
+    padding: 30px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--border-soft);
+}
+
+h2 {
+    color: var(--purple-primary);
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--border-soft);
+    padding-bottom: 8px;
+}
+
+/* Skills Badges / Pills */
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 12px;
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .skills-list li {
-    background-color: var(--primary-light);
-    color: var(--primary-color);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: var(--radius-pill);
+    font-size: 0.95rem;
+    font-weight: 600;
 }
 
-.item {
-    margin-bottom: 16px;
+/* Individual Pill Colors matching target design */
+.skills-list li:nth-child(1) {
+    background-color: #e2dbf8;
+    color: #4a347f;
 }
 
-.item:last-child {
-    margin-bottom: 0;
+.skills-list li:nth-child(2) {
+    background-color: #f6c8f4;
+    color: #7c2278;
 }
 
-.item-header {
-    display: flex;
-    justify-content: space-between;
+.skills-list li:nth-child(3) {
+    background-color: #fde8b3;
+    color: #795709;
 }
 
+.skills-list li:nth-child(4) {
+    background-color: #f4bbf2;
+    color: #6d1b6a;
+}
+
+/* Education Item Details */
 .item-title {
     font-weight: bold;
-}
-
-.item-date {
-    font-weight: normal;
+    font-size: 1.05rem;
 }
 
 .item-sub {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-bottom: 4px;
+    color: #666;
+    margin-top: 4px;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    color: var(--text-muted);
+    color: #888;
     font-size: 0.85rem;
     margin-top: 40px;
+    padding-bottom: 20px;
 }

@@ -3,54 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRIN135 - Midterm Exam | Portfolio</title>
-
-    <!-- Google Fonts: Orbitron for titles/headers, Inter for body text -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-
-    <!-- External Stylesheet -->
+    <title>Franchesca G. Untalan | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body id="top">
+<body>
 
-    <!-- 1. Navigation Bar -->
-    <nav class="site-nav">
-        <div class="nav-inner">
-            <a href="#top" class="nav-brand">Portfolio</a>
-            <ul class="nav-links">
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+    <!-- Top Navigation Bar -->
+    <nav>
+        <a href="index.html" class="logo">Portfolio</a>
+        <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <!-- 2. Header / Hero Section -->
-   <!-- 2. Header / Hero Section -->
-<header>
-    <div class="header-inner">
-        <img src="https://scontent.fcrk2-1.fna.fbcdn.net/v/t39.30808-1/817417446_2326748791492255_1989576528764792257_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx2048x2048&ctp=s320x320&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGpwgCDBfkXOBpppuBgVSr0HxUEpVNTwCofFQSlU1PAKvqVIF-SnylBh5EkMIgd3Z3KFo35sI2lblA7njt722no&_nc_ohc=h1ymKxrBuwMQ7kNvwECC53G&_nc_oc=AdpCUfr-BhuO6tdxGqdZEoUiDdrtOPXlemxEXrJcBfa74h3HoyU1OCIDepk1Uj6EFfg&_nc_zt=24&_nc_ht=scontent.fcrk2-1.fna&_nc_gid=lCX5hVxhRALOA4O8TnCqOQ&_nc_ss=7b2a8&oh=00_AQQ6TYyN5XVR17D6eY7NJDKYj6CUVP2iy55_qMXcx3xdvw&oe=6AF310BF" alt="Franchesca G. Untalan" class="avatar">
-        <div class="header-text">
-            <h1>Franchesca G. Untalan</h1>
-            <div class="contact-info">
-                <span>📞 +63 917 123 4567</span>
-                <span>📧 <a href="mailto:chesca0922@gmail.com">chesca0922@gmail.com</a></span>
-                <span>💻 <a href="https://github.com" target="_blank">GitHub Activity</a></span>
-                <span>🖼️ <a href="gallery.html">View Photo Gallery</a></span>
+    <!-- Purple Header Banner -->
+    <header>
+        <div class="header-inner">
+            <img src="https://scontent.fcrk2-1.fna.fbcdn.net/v/t39.30808-1/817417446_2326748791492255_1989576528764792257_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx2048x2048&ctp=s320x320&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGpwgCDBfkXOBpppuBgVSr0HxUEpVNTwCofFQSlU1PAKvqVIF-SnylBh5EkMIgd3Z3KFo35sI2lblA7njt722no&_nc_ohc=h1ymKxrBuwMQ7kNvwECC53G&_nc_oc=AdpCUfr-BhuO6tdxGqdZEoUiDdrtOPXlemxEXrJcBfa74h3HoyU1OCIDepk1Uj6EFfg&_nc_zt=24&_nc_ht=scontent.fcrk2-1.fna&_nc_gid=lCX5hVxhRALOA4O8TnCqOQ&_nc_ss=7b2a8&oh=00_AQQ6TYyN5XVR17D6eY7NJDKYj6CUVP2iy55_qMXcx3xdvw&oe=6AF310BF" alt="Franchesca G. Untalan" class="avatar">
+            <div class="header-text">
+                <h1>Franchesca G. Untalan</h1>
+                <ul class="contact-info" id="contact">
+                    <li>+63 917 123 4567</li>
+                    <li><a href="mailto:chesca0922@gmail.com">chesca0922@gmail.com</a></li>
+                    <li><a href="https://github.com" target="_blank">GitHub Activity</a></li>
+                    <li><a href="gallery.html">View Photo Gallery</a></li>
+                </ul>
+                <p class="tagline">I was born to be a diva.</p>
             </div>
-            <p>I was born to be a diva.</p>
         </div>
-    </div>
-</header>
+    </header>
 
-    <!-- 3. Main Content Container -->
-    <main class="main-content">
+    <!-- Main Content Cards -->
+    <div class="container">
 
-        <!-- Skills Section -->
-        <section id="skills">
+        <section class="card" id="skills">
             <h2>Skills</h2>
             <ul class="skills-list">
                 <li>Python</li>
@@ -60,78 +49,19 @@
             </ul>
         </section>
 
-        <!-- Education Section -->
-        <section id="education">
+        <section class="card" id="education">
             <h2>Education</h2>
-
-            <div class="education-entry">
-                <span class="education-year">2024 - 2026</span>
-                <h3>Bachelor of Science in Information Technology</h3>
-                <p>Centro Escolar University of Malolos</p>
-            </div>
-
-            <div class="education-entry">
-                <span class="education-year">2022 - 2024</span>
-                <h3>STEM Strand</h3>
-                <p>Holy Spirit Academy of Malolos</p>
-            </div>
-
-            <div class="education-entry">
-                <span class="education-year">2018 - 2022</span>
-                <h3>High School</h3>
-                <p>Holy Spirit Academy of Malolos</p>
-            </div>
-
-            <div class="education-entry">
-                <span class="education-year">2012 - 2018</span>
-                <h3>Elementary Education</h3>
-                <p>Holy Spirit Academy of Malolos</p>
+            <div class="item">
+                <div class="item-title">Bachelor of Science in Information Technology</div>
+                <div class="item-sub">2024 - 2026 • Centro Escolar University of Malolos</div>
             </div>
         </section>
 
-        <!-- Achievements Section -->
-        <section id="achievements">
-            <h2>Achievements</h2>
-            <ul class="achievements-list">
-                <li><strong>Dean's Lister</strong> - A.Y. 2024-2025</li>
-                <li><strong>TESDA NC II Certificate</strong> - 2024</li>
-                <li><strong>Cisco Networking Academy Certificate</strong> - 2025</li>
-                <li><strong>SQL Intermediate Certification</strong> - 2025</li>
-                <li><strong>GitHub Project Collaborator</strong> - 2026</li>
-            </ul>
-        </section>
+        <footer>
+            <p>&copy; 2026 Franchesca G. Untalan. All rights reserved.</p>
+        </footer>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form action="#" method="post">
-                <div class="form-group-row">
-                    <div>
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="chin@example.com" required>
-                    </div>
-                </div>
-
-                <div>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Leave a message" required></textarea>
-                </div>
-
-                <button type="submit">Give me a call!</button>
-            </form>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>Franchesca G. Untalan · Portfolio</p>
-        <a href="#top">Back to top ↑</a>
-    </footer>
+    </div>
 
 </body>
 </html>
